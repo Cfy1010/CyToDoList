@@ -1,20 +1,9 @@
 @import "reset.css";
 
-/*
- * Fond = `#2e5849`
- * Fond Input = `#1c382f`
- * Bordure Input = `#183129`
- * Ombre interne Input = `25px` `rgba(0,0,0,.1)`
- * Ombre interne Input Focus = `25px` `rgba(0,0,0,.5)`
- * Texte Input = `#fff`
- * Placeholder Input = `rgba(255, 255, 255, .5)`
- * Fond Tâche = `#eee`
- * Bordure tâche = `#ccc`
- */
-
 
 body {
-  background: #234567;
+  background: #444;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -28,11 +17,11 @@ body {
 
 #todo-input {
   width: 100%;
-  color: #f90;
+  color: #eece1a;
   font-size: 2em;
   height: 3em;
-  background: #123456;
-  border: 1px solid #012345;
+  background: #373737;
+  border: 1px solid black;
   box-shadow: inset 0 0 25px rgba(0,0,0,.1);
   padding: 1em;
 }
@@ -54,8 +43,8 @@ body {
  * Items
  */
 .todo {
-  background: #89abcd;
-  border: 1px solid #f90;
+  background: #373737;
+  border: 1px solid #eece1a;
   border-radius: .3em;
   font-size: 1.2em;
   padding: 1em;
@@ -70,3 +59,7 @@ body {
 .todo--done .todo-text {
   text-decoration: line-through;
 }
+span {
+  color: #fff;
+}
+  

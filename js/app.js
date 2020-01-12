@@ -36,7 +36,7 @@ var app = {
   createCount: function () {
     // je crée une div
     var counter = document.createElement('div');
-    // je mets un id à cette div
+    // je mets un id à cette div pour le css
     counter.id = 'todo-counter';
     app.todo.appendChild(counter);
     // je prends  la div et je la rends accessible dans app.counterDOM
@@ -45,7 +45,7 @@ var app = {
     app.todo.appendChild(counter);
   },
   updateCount: function () {
-    app.counterDOM.textContent = `${app.counter} taches(s) en cours`;
+    app.counterDOM.textContent = `${app.counter} tache(s) en cours`;
   },
 
   createList: function () {
@@ -82,16 +82,31 @@ var app = {
     var checkbox = document.createElement('input');
     checkbox.className = 'todo-check';
     checkbox.type = 'checkbox';
+    // j'ecoute ma checkbox
+    checkbox.addEventListener('change', app.checkItem);
     // j'ajoute la checkbox dans la todo
     item.appendChild(checkbox);
     // je crée le texte de la todo
     var paragrah = document.createElement('span');
+    paragrah.className = 'todo-text';
     // le tetxte sera égal au texte reçu en parametre de la fonction
     paragrah.textContent = text;
     // je mets le texte dans la todo
     item.appendChild(paragrah);
     // Je mets la todo dans LES todos
     app.list.appendChild(item);
+  },
+
+  checkItem: function () {
+    var parent = this.parentNode;
+    if (parent.classList.contains('todo--done')) {
+      parent.classList.remove('todo--done');
+      app.counter++;
+    } else {
+      parent.classList.add('todo--done');
+      app.counter--;
+    }
+    app.updateCount();
   }
 
 };
