@@ -1,0 +1,72 @@
+@import "reset.css";
+
+/*
+ * Fond = `#2e5849`
+ * Fond Input = `#1c382f`
+ * Bordure Input = `#183129`
+ * Ombre interne Input = `25px` `rgba(0,0,0,.1)`
+ * Ombre interne Input Focus = `25px` `rgba(0,0,0,.5)`
+ * Texte Input = `#fff`
+ * Placeholder Input = `rgba(255, 255, 255, .5)`
+ * Fond Tâche = `#eee`
+ * Bordure tâche = `#ccc`
+ */
+
+
+body {
+  background: #234567;
+}
+
+
+/*
+ * List
+ */
+#todo {
+  width: 500px;
+  margin: 3em auto;
+}
+
+#todo-input {
+  width: 100%;
+  color: #f90;
+  font-size: 2em;
+  height: 3em;
+  background: #123456;
+  border: 1px solid #012345;
+  box-shadow: inset 0 0 25px rgba(0,0,0,.1);
+  padding: 1em;
+}
+
+#todo-counter {
+  margin-top: 2em;
+  font-size: 1.3em;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding: .5em 0;
+}
+
+#todo-list {
+  margin-top: 1em;
+}
+
+
+/*
+ * Items
+ */
+.todo {
+  background: #89abcd;
+  border: 1px solid #f90;
+  border-radius: .3em;
+  font-size: 1.2em;
+  padding: 1em;
+  margin: .5em 0;
+}
+.todo-text {
+  margin-left: .5em;
+}
+.todo--done {
+  opacity: .5;
+}
+.todo--done .todo-text {
+  text-decoration: line-through;
+}
