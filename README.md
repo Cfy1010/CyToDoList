@@ -1,4 +1,5 @@
-# CyToDoList
+# CyToDoList 
+## mode logique impérative 
 1. Interface en JS
 
 2. Ajout d'une tâche en écrivant dans l'input puis en validant avec la touche Entrée.
